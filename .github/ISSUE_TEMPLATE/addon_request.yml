@@ -1,0 +1,33 @@
+name: "Request an Addon"
+description: Create a request for a new addon
+labels: '🌟Addon Request🌟'
+body:
+- type: markdown
+  attributes:
+    value: |
+      Please search for existing request before creating a new one.
+
+- type: textarea
+  attributes:
+    label: 3.3.5 Compatible version of the addon
+    description: Link the addon here. 
+  validations:
+    required: true
+
+- type: checkboxes
+  id: testing
+  attributes:
+    label: Requires Fixes
+    description: Does this addon need to be updated to work with Ascension?
+    options:
+      - label: "Yes"
+      - label: "No"
+  validations:
+    required: true
+
+- type: textarea
+  attributes:
+    label: Addon Description
+    description: Please give a brief description of what this addon does. 
+  validations:
+    required: true
